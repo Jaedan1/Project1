@@ -1,0 +1,50 @@
+table{
+    display: table;
+    border-spacing: 30px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+tr{
+display: table-row;
+border-spacing:  30px;
+border: 1px solid black;
+    
+}
+tr>*{
+    display: table-cell;
+    border: 1px solid black;
+    padding: 15px;
+    
+
+}
+th{
+    text-align: center;
+}
+td{
+    text-align: left;
+}
+.title{
+    width: 400px;
+    
+}
+form{
+    margin-top: 20px;
+    padding: 30px;
+
+}
+input[type='number']{
+    width: 250px;
+} 
+input[type='text']{
+    width: 250px;
+} 
+
+div.table{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+div.form{
+    display: block;
+    text-align: center;
+}
