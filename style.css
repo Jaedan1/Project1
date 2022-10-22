@@ -62,3 +62,9 @@ div.form{
 h1{
     text-align: center;
 }
+.deletebtn{
+    background-color: red;
+    color: white;
+    width: 75px;
+
+}
