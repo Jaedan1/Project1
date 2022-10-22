@@ -28,8 +28,7 @@ td{
     
 }
 form{
-    margin-top: 20px;
-    padding: 30px;
+    
 
 }
 input[type='number']{
@@ -45,6 +44,8 @@ div.table{
     justify-content:center;
 }
 div.form{
+    margin-top: 20px;
+    padding: 30px;
     display: block;
     text-align: center;
 }
