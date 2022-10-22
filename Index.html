@@ -4,27 +4,26 @@
 <head>
     <link href="style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+
 </head>
 
 <body>
     <h1 Style="text-align: center;"> My Favorite Movies</h1>
     <div class="form">
 
-        
+
         <label for="mvetitle"> Movie Title: </label>
         <input id="mvetitle" type="text" placeholder="Movie Title" required>
         <label for="rating"> Rating </label>
-        <input id="rating" type="number" min="0" max="10" step="1" placeholder="Give a Rating From 0 to 10"
-                required>
+        <input id="rating" type="number" min="0" max="10" step="1" placeholder="Give a Rating From 0 to 10" required>
         <button id="btn" class="addmve">Add Movie</button>
-        
+
 
     </div>
     <div class="table">
-        <table id = "movietable">
+        <table id="movietable">
 
-            <tr id = "default">
+            <tr id="default">
                 <th class="title">
                     Movie name
                 </th>
@@ -39,20 +38,20 @@
 
         </table>
     </div>
-<script>
-        
-            $(document).ready(function(){
-               
+    <script>
 
-                $("#btn").click(function(){
-                    var usermovie = $("#mvetitle").val();
-                    var userrating = $("#rating").val();
-                    $('#movietable').append("<tr><td> " + usermovie + " </td><td>" + userrating + "</td> <td><button> delete </button> </td></tr>");
-        
+        $(document).ready(function () {
 
 
-                });
+            $("#btn").click(function () {
+                var usermovie = $("#mvetitle").val();
+                var userrating = $("#rating").val();
+                $('#movietable').append("<tr><td> " + usermovie + " </td><td>" + userrating + "</td> <td><button> delete </button> </td></tr>");
+
+
+
             });
+        });
 
 
     </script>
