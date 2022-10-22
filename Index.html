@@ -46,11 +46,15 @@
             $("#btn").click(function () {
                 var usermovie = $("#mvetitle").val();
                 var userrating = $("#rating").val();
-                $('#movietable').append("<tr><td> " + usermovie + " </td><td>" + userrating + "</td> <td><button> delete </button> </td></tr>");
+                $('#movietable').append('<tr><td>' + usermovie + ' </td><td>' + userrating + '</td> <td><button id = "dbtn" class = "deletebtn"> delete </button> </td></tr>');
 
 
 
             });
+        });
+        $('table').on('click', '.deletebtn', function(e){
+            e.preventDefault();
+            $(this).parents('tr').remove();
         });
 
 
