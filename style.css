@@ -6,10 +6,10 @@ table {
 }
 
 tr {
-    display: table-row;
+display: table-row;
     border-spacing: 30px;
-    border: 1px solid black;
-
+border: 1px solid black;
+    
 }
 
 tr>* {
@@ -28,16 +28,16 @@ td {
 
 .title {
     width: 400px;
-
+    
 }
 
 input[type='number'] {
     width: 250px;
-}
+} 
 
 input[type='text'] {
     width: 250px;
-}
+} 
 
 div.table {
     display: flex;
@@ -72,7 +72,7 @@ div.form {
     text-align: center;
     background-color: #f1f1f1;
     width: 800px;
-}
+  }
 
 h1 {
     text-align: center;
@@ -179,3 +179,19 @@ h1 {
     border-color:dodgerblue;
     color: white;
 }
+.footer{
+    overflow: hidden;
+    background-color: #f1f1f1;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+input:invalid {
+    border: 1px solid red;
+  }
+  
+  input:valid {
+    border: 1px solid green;
+  }
