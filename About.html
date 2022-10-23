@@ -21,7 +21,7 @@
     <div class="cardDiv">
         <div class="card">
             <h2 id="cardName" >Charalampos Chastoukis</h2>
-            <img id="cardImage" src="harisImage.jpg" alt="Image of Charalampos Chastoukis" style="max-width: 25%;">
+            <img id="cardImage" src="harisImage.jpg" alt="Image of Charalampos Chastoukis" style="max-width: 35%;">
             <p id="cardParagraph">Haris is a passionate proggramer working on this project</p>
             <button type="button" id="button" class="button">Next</button>
         </div>
@@ -36,12 +36,14 @@
         if (hariShows){
             $("#cardName").html("Charalampos Chastoukis");
             $("#cardImage").attr("src","harisImage.jpg");
+            $("#cardImage").attr("style","max-width: 35%");
             $("#cardImage").attr("alt","Image of Charalampos Chastoukis");
             $("#cardParagraph").html("Haris is a passionate proggramer working on this project");
         }
         else{
             $("#cardName").html("Jaedan Smith");
             $("#cardImage").attr("src","jaedanImage.jpg");
+            $("#cardImage").attr("style","max-width: 25%");
             $("#cardImage").attr("alt","Image of Jaedan Smith");
             $("#cardParagraph").html("Jaedan is a hard-working and commited student and programmer.");
         }

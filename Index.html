@@ -12,8 +12,8 @@
         <img id="logo" src="logo/noBackGround.png" alt="Logo">
         <h1 Style="text-align: center;"> My Favorite Movies</h1>
         <div class="header-right">
-          <a class="active" href="Index.html">Home</a>
-          <a href="About.html">About</a>
+            <a class="active" href="Index.html">Home</a>
+            <a href="About.html">About</a>
         </div>
     </div>
 
@@ -25,7 +25,8 @@
         </div>
         <div class="fields">
             <label for="rating">Rating: </label>
-            <input id="rating" type="number" min="0" max="10" step="1" placeholder="Give a Rating From 0 to 10" required>
+            <input id="rating" type="number" min="0" max="10" step="1" placeholder="Give a Rating From 0 to 10"
+                required>
         </div>
         <button id="btn" class="addmovie">Add Movie</button>
     </div>
@@ -37,13 +38,13 @@
     </div>
 
     <!-- Footer -->
-    <div class = "footer" id = "myfooter">
+    <div class="footer" id="myfooter">
         <span style="text-align: center;
-                    font-style: italic;"> 	
-                    &#169 Jaedan And Haris 2022
+                    font-style: italic;">
+            &#169 Jaedan And Haris 2022
         </span>
     </div>
-    
+
 </body>
 
 <script>
@@ -59,28 +60,19 @@
 
     //When the button is clicked add the movie to the list
     $("#btn").click(function () {
-        
         var usermovie = $("#mvetitle").val();
         var userrating = $("#rating").val();
         console.log(userrating);
         console.log(usermovie)
-        if(!userrating || !usermovie)
-        {
+        if (!userrating || !usermovie) {
             alert("Your input Cannot be Null");
-           
-                
         }
-        else if(userrating > 0 && userrating < 10){
-                alert("Your input Must be between 0 and 10")
-
-
+        else if (userrating < 1 || userrating > 10) {
+            alert("Your input Must be between 1 and 10")
         }
-        else{
-            
+        else {
             movieList.unshift([usermovie, userrating]);
-             updateTable();
-                
-            
+            updateTable();
         }
     });
 
@@ -117,7 +109,7 @@
     //Updates the table to reflect the list
     function updateTable() {
         $('#movietable').empty();
-        $('#movietable').append('<tr id="default"><th class="title">Movie name  <button type="button" class="sortByName">Sort</button></th><th>Rating  <button type="button" class="sortByRating">Sort</button></th><th>Delete</th></tr>');
+        $('#movietable').append('<tr id="default" class="tableHead"><th class="title">Movie name  <button type="button" class="sortByName">Sort</button></th><th>Rating  <button type="button" class="sortByRating">Sort</button></th><th>Delete</th></tr>');
         for (i = 0; i < movieList.length; i++) {
             $('#movietable').append('<tr><td>' + movieList[i][0] + ' </td><td>' + movieList[i][1] + '</td> <td><button id = "' + i + '" class = "deletebtn"> Delete </button> </td></tr>');
         }
