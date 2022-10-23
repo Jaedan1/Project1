@@ -9,24 +9,25 @@
 <body>
     <!-- Sticky header -->
     <div class="header" id="myHeader">
-        <img src="logo/noBackGround.png" alt="Logo" style="max-width: 10%;">
-        <h2>My Header</h2>
+        <img id="logo" src="logo/noBackGround.png" alt="Logo">
+        <h1 Style="text-align: center;"> My Favorite Movies</h1>
         <div class="header-right">
-          <a class="active" href="#home">Home</a>
-          <a href="#about">About</a>
+          <a class="active" href="Index.html">Home</a>
+          <a href="About.html">About</a>
         </div>
     </div>
 
-    <!-- Title -->
-    <h1 Style="text-align: center;"> My Favorite Movies</h1>
-
     <!-- Form -->
     <div class="form">
-        <label for="mvetitle"> Movie Title: </label>
-        <input id="mvetitle" type="text" placeholder="Movie Title" required>
-        <label for="rating"> Rating </label>
-        <input id="rating" type="number" min="0" max="10" step="1" placeholder="Give a Rating From 0 to 10" required>
-        <button id="btn" class="addmve">Add Movie</button>
+        <div class="fields">
+            <label for="mvetitle"> Movie Title: </label>
+            <input id="mvetitle" type="text" placeholder="Movie Title" required>
+        </div>
+        <div class="fields">
+            <label for="rating">Rating: </label>
+            <input id="rating" type="number" min="0" max="10" step="1" placeholder="Give a Rating From 0 to 10" required>
+        </div>
+        <button id="btn" class="addmovie">Add Movie</button>
     </div>
 
     <!-- Table -->
@@ -34,6 +35,9 @@
         <table id="movietable">
         </table>
     </div>
+
+    <!-- Footer -->
+    
 </body>
 
 <script>
@@ -90,7 +94,7 @@
         $('#movietable').empty();
         $('#movietable').append('<tr id="default"><th class="title">Movie name  <button type="button" class="sortByName">Sort</button></th><th>Rating  <button type="button" class="sortByRating">Sort</button></th><th>Delete</th></tr>');
         for (i = 0; i < movieList.length; i++) {
-            $('#movietable').append('<tr><td>' + movieList[i][0] + ' </td><td>' + movieList[i][1] + '</td> <td><button id = "' + i + '" class = "deletebtn"> delete </button> </td></tr>');
+            $('#movietable').append('<tr><td>' + movieList[i][0] + ' </td><td>' + movieList[i][1] + '</td> <td><button id = "' + i + '" class = "deletebtn"> Delete </button> </td></tr>');
         }
     }
 </script>
