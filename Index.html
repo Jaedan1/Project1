@@ -39,11 +39,11 @@
 
     <!-- Footer -->
     <div class="footer" id="myfooter">
-        <span style="text-align: center;
-                    font-style: italic;">
-                <img id="footerlogo" src="logo/noBackGround.png" alt="Logo">
-            &#169 Jaedan And Haris 2022
-        </span>
+        <img id="footerlogo" src="logo/noBackGround.png" alt="Logo">
+        <div>
+            &#169 Jaedan Smith And <a href="https://www.linkedin.com/in/haris-chastoukis-a0b81823b/">Charalampos Chastoukis</a> 2022
+        </div>
+        <a id="github" href="https://github.com/Jaedan1/Project1">Github</a>
     </div>
 
 </body>
@@ -71,7 +71,7 @@
         else if (userRating < 1 || userRating > 10) {
             alert("Your input Must be between 1 and 10")
         }
-        else if (isIn(userMovie)){
+        else if (isIn(userMovie)) {
             alert("Movie is already in the list!")
         }
         else {
@@ -120,9 +120,9 @@
     }
 
     //Checks if the list contains a movie
-    function isIn(movieName){
+    function isIn(movieName) {
         for (i = 0; i < movieList.length; i++) {
-            if (movieList[i][0]==movieName){
+            if (movieList[i][0] == movieName) {
                 return true;
             }
         }
@@ -130,4 +130,5 @@
     }
 
 </script>
+
 </html>

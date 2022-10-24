@@ -20,20 +20,19 @@
     <!-- Cards -->
     <div class="cardDiv">
         <div class="card">
-            <h2 id="cardName" >Charalampos Chastoukis</h2>
+            <h2 id="cardName">Charalampos Chastoukis</h2>
             <img id="cardImage" src="harisImage.jpg" alt="Image of Charalampos Chastoukis" style="max-width: 35%;">
             <p id="cardParagraph">Haris is a passionate proggramer working on this project</p>
             <button type="button" id="button" class="button">Next</button>
         </div>
     </div>
-    <!---Footer-->
-    <div class = "footer">
-        <span style="text-align: center;
-                    font-style: italic;">
-            <img id="footerlogo" src="logo/noBackGround.png" alt="Logo">
-            &#169 Jaedan And Haris 2022
-        </span>
-
+    <!-- Footer -->
+    <div class="footer" id="myfooter">
+        <img id="footerlogo" src="logo/noBackGround.png" alt="Logo">
+        <div>
+            &#169 Jaedan Smith And <a href="https://www.linkedin.com/in/haris-chastoukis-a0b81823b/">Charalampos Chastoukis</a> 2022
+        </div>
+        <a id="github" href="https://github.com/Jaedan1/Project1">Github</a>
     </div>
 </body>
 
@@ -44,21 +43,22 @@
     //When the button is clicked set the values accordingly
     $("#button").click(function () {
         hariShows = !hariShows;
-        if (hariShows){
+        if (hariShows) {
             $("#cardName").html("Charalampos Chastoukis");
-            $("#cardImage").attr("src","harisImage.jpg");
-            $("#cardImage").attr("style","max-width: 35%");
-            $("#cardImage").attr("alt","Image of Charalampos Chastoukis");
+            $("#cardImage").attr("src", "harisImage.jpg");
+            $("#cardImage").attr("style", "max-width: 35%");
+            $("#cardImage").attr("alt", "Image of Charalampos Chastoukis");
             $("#cardParagraph").html("Haris is a passionate proggramer working on this project");
         }
-        else{
+        else {
             $("#cardName").html("Jaedan Smith");
-            $("#cardImage").attr("src","jaedanImage.jpg");
-            $("#cardImage").attr("style","max-width: 25%");
-            $("#cardImage").attr("alt","Image of Jaedan Smith");
+            $("#cardImage").attr("src", "jaedanImage.jpg");
+            $("#cardImage").attr("style", "max-width: 25%");
+            $("#cardImage").attr("alt", "Image of Jaedan Smith");
             $("#cardParagraph").html("Jaedan is a hard-working and commited student and programmer.");
         }
     });
 
 </script>
+
 </html>
