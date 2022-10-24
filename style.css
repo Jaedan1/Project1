@@ -212,3 +212,10 @@ input:invalid {
 input:valid {
     border: 2px solid green;
 }
+#footerlogo{
+
+    width: 2%;
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
