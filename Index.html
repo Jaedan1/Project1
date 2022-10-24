@@ -20,13 +20,13 @@
     <!-- Form -->
     <div class="form">
         <div class="fields">
-            <label for="mvetitle"> Movie Title: </label>
-            <input id="mvetitle" type="text" placeholder="Movie Title" required>
+            <label for="movieTitle"> Movie Title: </label>
+            <input id="movieTitle" class="inputField" type="text" placeholder="Movie Title" required>
         </div>
         <div class="fields">
             <label for="rating">Rating: </label>
-            <input id="rating" type="number" min="0" max="10" step="1" placeholder="Give a Rating From 0 to 10"
-                required>
+            <input id="rating" class="inputField" type="number" min="0" max="10" step="1"
+                placeholder="Give a Rating From 0 to 10" required>
         </div>
         <button id="btn" class="addmovie">Add Movie</button>
     </div>
@@ -48,7 +48,7 @@
 </body>
 
 <script>
-    //2DList that contains movies 
+    //2DList that contains movies with ratings 
     var movieList = [];
 
     //At start initialize table
@@ -60,18 +60,21 @@
 
     //When the button is clicked add the movie to the list
     $("#btn").click(function () {
-        var usermovie = $("#mvetitle").val();
-        var userrating = $("#rating").val();
-        console.log(userrating);
-        console.log(usermovie)
-        if (!userrating || !usermovie) {
+        var userMovie = $("#movieTitle").val();
+        var userRating = $("#rating").val();
+        console.log(userRating);
+        console.log(userMovie)
+        if (!userRating || !userMovie) {
             alert("Your input Cannot be Null");
         }
-        else if (userrating < 1 || userrating > 10) {
+        else if (userRating < 1 || userRating > 10) {
             alert("Your input Must be between 1 and 10")
         }
+        else if (isIn(userMovie)){
+            alert("Movie is already in the list!")
+        }
         else {
-            movieList.unshift([usermovie, userrating]);
+            movieList.unshift([userMovie, userRating]);
             updateTable();
         }
     });
@@ -114,7 +117,16 @@
             $('#movietable').append('<tr><td>' + movieList[i][0] + ' </td><td>' + movieList[i][1] + '</td> <td><button id = "' + i + '" class = "deletebtn"> Delete </button> </td></tr>');
         }
     }
-</script>
-<script src="header.js"></script>
 
+    //Checks if the list contains a movie
+    function isIn(movieName){
+        for (i = 0; i < movieList.length; i++) {
+            if (movieList[i][0]==movieName){
+                return true;
+            }
+        }
+        return false;
+    }
+
+</script>
 </html>
