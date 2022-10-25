@@ -71,9 +71,9 @@
         else if (userRating < 1 || userRating > 10) {
             alert("Your input Must be between 1 and 10")
         }
-        else if (isIn(userMovie)) {
-            alert("Movie is already in the list!")
-        }
+         else if (isIn(userMovie)) {
+             alert("Movie is already in the list!")
+         }
         else {
             movieList.unshift([userMovie, userRating]);
             updateTable();
