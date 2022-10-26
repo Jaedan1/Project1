@@ -1,31 +1,70 @@
-*{
-    margin: 0;
-}
-html{
+/* Fundamentals */
+html {
     position: relative;
     min-height: 100%;
 }
+
 body {
     background-color: rgb(229, 242, 255);
     margin-top: 150px;
     margin-bottom: 20px;
 }
 
+.title {
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Input fields */
 .inputField {
     background-color: rgb(229, 242, 255);
 }
 
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid green;
+}
+
+input[type='number'] {
+    width: 250px;
+}
+
+input[type='text'] {
+    width: 250px;
+}
+
+div.form {
+    margin-top: 20px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.fields {
+    padding: 15px;
+}
+
+/* Table */
 table {
     display: table;
     border-spacing: 30px;
     border-collapse: collapse;
     border: 1px solid black;
-    
+
 }
-#movietable{
-    
+
+#movietable {
     margin-bottom: 30px;
 }
+
 tr {
     display: table-row;
     border-spacing: 30px;
@@ -48,38 +87,13 @@ td {
     text-align: left;
 }
 
-.title {
-    width: 400px;
-
-}
-
-input[type='number'] {
-    width: 250px;
-}
-
-input[type='text'] {
-    width: 250px;
-}
-
 div.table {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-div.form {
-    margin-top: 20px;
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-}
-
-.fields {
-    padding: 15px;
-}
-
+/* About Cards */
 .cardDiv {
     justify-content: center;
     display: flex;
@@ -88,7 +102,6 @@ div.form {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    /* this adds the "card" effect */
     align-self: center;
     padding: 16px;
     text-align: center;
@@ -98,8 +111,14 @@ div.form {
     width: 800px;
 }
 
-h1 {
-    text-align: center;
+/* Buttons */
+.addmovie {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+    color: white;
 }
 
 .deletebtn {
@@ -111,65 +130,7 @@ h1 {
     border-radius: 2px;
 }
 
-/* Style the header with a background and some padding */
-.header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    overflow: hidden;
-    background-color: #f6ebdc;
-    border-style: solid;
-    border-color: #f1e0c9;
-    padding: 20px 10px;
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: space-between;
-}
-
-/* Style the header links */
-.header a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-}
-
-#logo {
-    max-width: 5%;
-    min-width: 5em;
-}
-
-.header a {
-    margin-right: 10px;
-}
-
-/* Change the background color on mouse-over */
-.header a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Style the active/current link*/
-.header a.active {
-    background-color: dodgerblue;
-    color: white;
-}
-
-/* Float the link section to the right */
-.header-right {
-    float: right;
-    padding: 20px;
-    padding-right: 25px;
-}
-
-.button {
+.nextCardButton {
     width: 50px;
     height: 25px;
     border-radius: 2px;
@@ -196,17 +157,58 @@ h1 {
     color: white;
 }
 
-.addmovie {
-    width: 80px;
-    height: 40px;
-    border-radius: 5px;
+/* Header */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    overflow: hidden;
+    background-color: #f6ebdc;
+    border-style: solid;
+    border-color: #f1e0c9;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#logo {
+    max-width: 5%;
+    min-width: 5em;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header a.active {
     background-color: dodgerblue;
-    border-color: dodgerblue;
     color: white;
 }
 
+.header-right {
+    float: right;
+    padding: 20px;
+    padding-right: 25px;
+}
+
+/* Footer */
 .footer {
-    
     background-color: #f6ebdc;
     border-style: solid;
     border-color: #f1e0c9;
@@ -214,11 +216,10 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
     text-align: center;
     font-style: italic;
     display: flex;
-    height:auto;
+    height: auto;
     justify-content: space-between;
     min-height: 20px;
     margin-top: 50px;
@@ -237,12 +238,4 @@ h1 {
     background-size: 5px 5px;
     background-repeat: no-repeat;
     background-position: center center;
-}
-
-input:invalid {
-    border: 2px solid red;
-}
-
-input:valid {
-    border: 2px solid green;
 }
